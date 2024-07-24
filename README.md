@@ -26,4 +26,5 @@ Este proyecto se encuentra en una etapa beta.
 
 ### Autores y Reconocimientos
 Wilfredo Martinez
+
 Gabriela Lopez 
