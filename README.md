@@ -12,7 +12,7 @@ El Gestor de Espacios Comunes - Area de Recreación tiene como finalidad brindar
 
 ### Documentación
 # Guía de Usuario
-Para generar alguna reserva en algún Área de Recreación, se podrá realizar utilizando el e-mail o el Rut del colaborador/a, seleccionado de los lugares que se encuentran disponibles, así como los días y horarios.
+Para generar una reserva en alguan Área de Recreación, se podrá realizar utilizando el Nombre y Apellido del colaborador/a, seleccionado los lugares que se encuentran disponibles, así como los días y horarios.
 ### Estado del Proyecto
 Este proyecto se encuentra en una etapa beta.
 
