@@ -1,20 +1,9 @@
 # Bienvenidos al Gestor de Espacios Comunes - Area Recreación  
 Una aplicación web para ayudar con la gestión de las reservas de los espacios comunes - Área Recreación
 
-## Tabla de Contenidos
-1. [Descripción](#descripción)
-2. [Instalación](#instalación)
-3. [Uso](#uso)
-4. [Documentación](#documentación)
-5. [Contribución](#contribución)
-6. [Estado del Proyecto](#estado-del-proyecto)
-7. [Licencia](#licencia)
-8. [Autores y Reconocimientos](#autores-y-reconocimientos)
-
 ## Descripción
 El Gestor de Espacios Comunes - Area de Recreación tiene como finalidad brindar una solución a una necesidad puntual administrar de manera eficiente los espacios del área de recreación de la empresa Pública, a través de una interfaz sencilla y fácil de utilizar. Los destinatarios serán los colaboradores de Pública, para brindar una experiencia placentera.
 
-## Instalación
 
 ### Requisitos Previos
 - Node.js v14.0 o superior
@@ -23,7 +12,7 @@ El Gestor de Espacios Comunes - Area de Recreación tiene como finalidad brindar
 
 ### Documentación
 # Guía de Usuario
-Para generar alguna reserva en algún Área de Recreación, se podrá realizar utilizando el e-mail o el Rut del colaborador/a, seleccionado de los lugares que se encuentran disponibles, así como los días y horarios.
+Para generar una reserva en alguan Área de Recreación, se podrá realizar utilizando el Nombre y Apellido del colaborador/a, seleccionado los lugares que se encuentran disponibles, así como los días y horarios.
 ### Estado del Proyecto
 Este proyecto se encuentra en una etapa beta.
 
