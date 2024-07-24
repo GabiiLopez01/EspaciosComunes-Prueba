@@ -5,10 +5,18 @@ Una aplicación web para ayudar con la gestión de las reservas de los espacios 
 El Gestor de Espacios Comunes - Area de Recreación tiene como finalidad brindar una solución a una necesidad puntual administrar de manera eficiente los espacios del área de recreación de la empresa Pública, a través de una interfaz sencilla y fácil de utilizar. Los destinatarios serán los colaboradores de Pública, para brindar una experiencia placentera.
 
 
-### Requisitos Previos
-- Node.js v14.0 o superior
-- npm v6.0 o superior
-### Uso 
+### Tecnologías y Recursos Utilizados
+- Html
+- JavaScript
+- Css 
+
+### Features solicitadas
+- Las reservas deben ser de espacios de tiempo acotados, no se puede reservar un sector por más de media jornada laboral (4 horas).
+- Se debe dar opción de anular reservas.
+- Las reservas deben contar con titularidad, deben ir asociadas al menos una persona a cargo de la instancia reservada.
+- El calendario de reservas debe considerar solo días hábiles laborales.
+- Los horarios reservables solo consideran desde 8am y 8pm.
+- Se puede hacer reserva a cualquier hora del día y cualquier día del año.
 
 ### Documentación
 # Guía de Usuario
@@ -19,9 +27,3 @@ Este proyecto se encuentra en una etapa beta.
 ### Autores y Reconocimientos
 Wilfredo Martinez
 Gabriela Lopez 
-
-### Pasos
-1. Clona el repositorio:
-   ```sh
-   git clone https://github.com/usuario/proyecto.git
-   cd proyecto
