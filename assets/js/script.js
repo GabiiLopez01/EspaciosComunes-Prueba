@@ -27,7 +27,7 @@ for (let hour = 8; hour <= 20; hour++) {
     }
 }
 
-// Generar opciones de duración en minutos
+// Genera opciones de duración en minutos
 const durationSelect = document.getElementById('duration');
 for (let minutes = 30; minutes <= 480; minutes += 30) {
     const option = new Option(`${minutes} minutos`, minutes.toString());
