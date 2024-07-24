@@ -52,7 +52,7 @@
         </div>
     </nav>
 
-    <!-- Carrusel con fondo en el navbar-->
+    <!-- Carrusel-->
 
     <header class="hero">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -81,7 +81,7 @@
     </header>
 
 
-    <!-- Sección ¿Quíenes somos? oculta para version sm -->
+    <!-- Sección áreas de recreación oculta para version sm -->
 
     <section class="acerca-de-mi text-center container-fluid pt-5 d-none d-sm-block .d-md-block">
 
@@ -95,7 +95,7 @@
 
 
                 <div class="col-md-4 pt-3">
-                    <i class="icon fa-solid fa-plane"></i>
+                    <i class="icon fa-solid fa-handshake"></i>
                     <p class="texto-mio">
                         El área de recreación de nuestra oficina está diseñada para el bienestar de los colaboradores y
                         cuenta con un vibrante sector de videojuegos, pensado para el disfrute grupal. Aquí, los
@@ -108,11 +108,11 @@
                     <p class="texto-mio">Además, hemos incluido mesas de ludoteca, también destinadas al uso grupal.
                         Estas mesas están equipadas con diversos juegos de mesa que promueven la colaboración y el
                         entretenimiento entre los compañeros de trabajo.</p>
-                    <i class="icon fa-solid fa-mountain"></i>
+                    <i class="icon fa-solid fa-gamepad"></i>
                 </div>
 
                 <div class="col-md-4 pt-3">
-                    <i class="icon fa-solid fa-route"></i>
+                    <i class="icon fa-solid fa-users"></i>
                     <p class="texto-mio">Para quienes buscan un momento de descanso, hemos dispuesto cómodos sillones de
                         uso grupal en zonas de relax, ideales para socializar o simplemente relajarse. Asimismo,
                         contamos con cabinas telefónicas de uso individual, proporcionando un espacio privado para
@@ -157,7 +157,7 @@
                         <img src="./assets/img/card2.webp" class="card-img-top" alt="card2">
                         <div class="card-body">
                             <h5 class="card-title text-white">Titularidad de la Reserva</h5>
-                            <p class="card-text text-white">Regla: Las reservas solo pueden ser realizadas por empleados
+                            <p class="card-text text-white">Las reservas solo pueden ser realizadas por empleados
                                 titulares de la empresa. El empleado que realice la reserva será considerado el
                                 responsable del uso adecuado del espacio durante el tiempo reservado.</p>
                         </div>
@@ -183,34 +183,55 @@
 
     </section>
 
-    <!-- Formulario -->
+    <!-- Reservas -->
 
     <section class="d-sm-block pb-5">
 
         <h2 class="my-5 text-black text-center" id="reservaciones">Reservaciones</h2>
         <hr class="custom-hr">
 
-        <div class="container">
+        <div class="container m-4">
 
 
-            <form class="form text-black">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre y Apellido</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Nombre del responsable</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">RUT</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="form-group">
+                    <label for="area">Área a reservar</label>
+                    <select id="area" name="area" required>
+                        <option value="">Seleccione un área</option>
+                        <option value="trabajo">Área de trabajo</option>
+                        <option value="reunion">Sala de reuniones</option>
+                        <option value="recreacion">Área de recreación</option>
+                    </select>
                 </div>
-                <div class="mb-3">
-                    <label for="formulario" class="form-label">Observaciones</label>
-                    <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background-color: #b32541; border: none;"
-                    data-bs-toggle="tooltip" data-bs-placement="right"
-                    data-bs-title="Presiona para enviar tu mensaje">Reservar</button>
+                <div class="form-group">
+                    <label for="time">Hora de inicio</label>
+                    <select id="time" name="time" required>
+                        <option value="">Seleccione hora de inicio</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duración</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">Seleccione duración</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="participants">Participantes adicionales</label>
+                    <textarea id="participants" name="participants" rows="3"
+                        placeholder="Ingrese los nombres de los participantes adicionales, separados por comas"></textarea>
+                </div>
+                <div class="suggestions" id="suggestions"></div>
+                <button type="submit">Reservar</button>
+                <button type="button" id="cancelReservation">Anular Reserva</button>
             </form>
-
         </div>
 
     </section>
