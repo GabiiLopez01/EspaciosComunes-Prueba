@@ -19,19 +19,30 @@ $(document).ready(function () {
 
 
 const timeSelect = document.getElementById('time');
-for (let hour = 8; hour <= 20; hour++) {
+for (let hour = 8; hour < 20; hour++) {
     for (let minute = 0; minute < 60; minute += 30) {
         const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
         const option = new Option(time, time);
         timeSelect.add(option);
     }
 }
+timeSelect.add(new Option('20:00', '20:00'));
 
 const durationSelect = document.getElementById('duration');
-for (let minutes = 30; minutes <= 480; minutes += 30) {
-    const option = new Option(`${minutes} minutos`, minutes.toString());
-    durationSelect.add(option);
+
+function addDurationOptions() {
+    const minHours = 1;
+    const maxHours = 4;
+
+    for (let hours = minHours; hours <= maxHours; hours++) {
+        const label = `${hours} ${hours > 1 ? 'horas' : 'hora'}`;
+        const value = hours * 60;
+        const option = new Option(label, value.toString());
+        durationSelect.add(option);
+    }
 }
+
+addDurationOptions();
 
 function esDiaHabil(fecha) {
     const dia = fecha.getDay();
@@ -89,16 +100,17 @@ document.getElementById('reservationForm').onsubmit = function (e) {
     const startTime = timeSelect.value;
     const duration = parseInt(durationSelect.value, 10);
     const [hours, minutes] = startTime.split(':').map(Number);
-    const endTime = new Date(2000, 0, 1, hours, minutes + duration);
+    const startDate = new Date(2000, 0, 1, hours, minutes);
+    const endDate = new Date(startDate.getTime() + duration * 60000);
 
-    if (endTime.getHours() > 20 || (endTime.getHours() === 20 && endTime.getMinutes() > 0)) {
+    if (endDate.getHours() > 20 || (endDate.getHours() === 20 && endDate.getMinutes() > 0)) {
         alert('La reserva no puede extenderse más allá de las 8:00 PM.');
         return;
     }
 
     const participants = document.getElementById('participants').value;
     let message = 'Reserva enviada.\n';
-    message += `Hora: ${startTime} - ${endTime.getHours()}:${endTime.getMinutes().toString().padStart(2, '0')}\n`;
+    message += `Hora: ${startTime} - ${endDate.getHours()}:${endDate.getMinutes().toString().padStart(2, '0')}\n`;
     if (participants) {
         message += `Participantes adicionales: ${participants}`;
     }
@@ -109,4 +121,4 @@ document.getElementById('cancelReservation').onclick = function () {
     alert('Funcionalidad para anular reservas no implementada.');
 };
 
-document.getElementById('date').addEventListener('change', updateAvailability)
+document.getElementById('date').addEventListener('change', updateAvailability);
