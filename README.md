@@ -8,7 +8,8 @@ El Gestor de Espacios Comunes - Area de Recreación tiene como finalidad brindar
 ### Tecnologías y Recursos Utilizados
 - Html
 - JavaScript
-- Css 
+- Css
+- Bootstrap
 
 ### Features solicitadas
 - Las reservas deben ser de espacios de tiempo acotados, no se puede reservar un sector por más de media jornada laboral (4 horas).
